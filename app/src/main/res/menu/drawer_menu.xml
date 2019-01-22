@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_noticias"
+            android:icon="@drawable/ic_noticias"
+            android:title="Noticias" />
+
+        <item
+            android:id="@+id/nav_calendario"
+            android:icon="@drawable/ic_calendario"
+            android:title="Calendario" />
+
+        <item
+            android:id="@+id/nav_ubicacion"
+            android:icon="@drawable/ic_ubicacion"
+            android:title="Ubicacion" />
+    </group>
+
+    <item android:title="Ayuda">
+        <menu>
+
+            <item
+                android:id="@+id/nav_seguridad"
+                android:icon="@drawable/ic_seguridad"
+                android:title="Seguridad" />
+
+            <item
+                android:id="@+id/nav_recursos"
+                android:icon="@drawable/ic_recursos"
+                android:title="Recursos" />
+
+            <item
+                android:id="@+id/nav_qr"
+                android:icon="@drawable/ic_qr"
+                android:title="Lector QR" />
+
+
+        </menu>
+    </item>
+
+</menu>

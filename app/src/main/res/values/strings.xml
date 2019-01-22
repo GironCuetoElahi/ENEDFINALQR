@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ENED 2018</string>
+    <string name="navigation_drawer_open">Abrir Navegador</string>
+    <string name="navigation_drawer_close">Cerrar Navegador</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="permission_granted">Permiso Concedido</string>
+    <string name="nombre_transicion_imagen">imagen_compartida</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

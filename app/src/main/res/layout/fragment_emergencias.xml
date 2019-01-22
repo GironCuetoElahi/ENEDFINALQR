@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/enedlogo2"
+    android:hapticFeedbackEnabled="false"
+    android:orientation="vertical"
+    tools:context=".Emergencias">
+
+
+   <ImageButton
+       android:id="@+id/llamar_poli"
+       android:layout_width="159dp"
+       android:layout_height="161dp"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentTop="true"
+       android:layout_marginStart="15dp"
+       android:layout_marginTop="46dp"
+       android:background="@drawable/detalle"
+       android:src="@drawable/policeman2" />
+
+   <ImageButton
+       android:id="@+id/llamar_bomb"
+       android:layout_width="164dp"
+       android:layout_height="161dp"
+       android:layout_alignParentEnd="true"
+       android:layout_alignTop="@+id/llamar_poli"
+       android:layout_marginEnd="17dp"
+       android:background="@drawable/detalle2"
+       android:src="@drawable/firefighter2" />
+
+   <ImageButton
+       android:id="@+id/llamar_cruz"
+       android:layout_width="159dp"
+       android:layout_height="156dp"
+       android:layout_alignParentBottom="true"
+       android:layout_alignStart="@+id/llamar_poli"
+       android:layout_marginBottom="84dp"
+       android:background="@drawable/detalle3"
+       android:src="@drawable/redcroise" />
+
+   <ImageButton
+       android:id="@+id/llamar_imss"
+       android:layout_width="164dp"
+       android:layout_height="157dp"
+       android:layout_alignStart="@+id/llamar_bomb"
+       android:layout_alignTop="@+id/llamar_cruz"
+       android:background="@drawable/detalle"
+       android:src="@drawable/ambulance" />
+</RelativeLayout>
