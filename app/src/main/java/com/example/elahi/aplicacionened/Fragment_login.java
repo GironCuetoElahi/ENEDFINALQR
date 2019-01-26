@@ -51,14 +51,21 @@ public class Fragment_login extends Fragment {
     private void validar(String Usuario, String Contrasenia) {
 
         if ((Usuario.equals("elahi")) && (Contrasenia.equals("1234"))) {
-            FragmentManager fragmentManager = getFragmentManager();
+
+            Intent i = new Intent(getContext(), lector_qr.class);
+            getActivity().startActivity(i);
+
+
+
+
+            /*FragmentManager fragmentManager = getFragmentManager();
             Fragment fragment = null;
             fragment = new lector_qr();
 
             fragmentManager
                     .beginTransaction()
                     .replace(R.id.fragment_container,
-                            fragment).commit();
+                            fragment).commit();*/
 
         } else
             Toast.makeText(getContext(), "Contraseña Incorrecta", Toast.LENGTH_SHORT).show();
