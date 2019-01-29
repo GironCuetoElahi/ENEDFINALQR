@@ -96,7 +96,7 @@ public class fragment_recurso extends Fragment {
 
     public void buscar(){
         //DEBUG_TAG= "https://elahito.000webhostapp.com/php/conection.php";
-        DEBUG_TAG= "http://192.168.1.66:8888/conection_rec.php/";
+        DEBUG_TAG= "http://192.168.88.33:8888/conection_rec.php/";
         new fragment_recurso.DownloadWebpageTask().execute(DEBUG_TAG);
 
     }

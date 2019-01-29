@@ -86,7 +86,7 @@ public class Noticias extends Fragment {
 
     public void buscar(){
         //DEBUG_TAG= "https://elahito.000webhostapp.com/php/conection.php";
-        DEBUG_TAG= "http://192.168.1.66:8888/conection.php/";
+        DEBUG_TAG= "http://192.168.88.33:8888/conection.php/";
         new Noticias.DownloadWebpageTask().execute(DEBUG_TAG);
 
     }

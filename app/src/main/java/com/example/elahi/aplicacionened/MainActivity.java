@@ -2,9 +2,11 @@ package com.example.elahi.aplicacionened;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -17,6 +19,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,8 +35,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Fragment_login log;
     android.support.v4.app.FragmentManager fm;
     android.support.v4.app.FragmentTransaction ft;
+
+    ImageView imagen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        imagen=(ImageView)findViewById(R.id.imageView3);
         if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE ) != PackageManager.PERMISSION_GRANTED) {
             //Si el permiso no se encuentra concedido se solicita
             ActivityCompat.requestPermissions( MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, CALL_PERMISSION_REQUEST_CODE);
@@ -62,8 +73,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(getApplicationContext(), "Revisa tu conexion a internet", Toast.LENGTH_LONG);
         }
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
 
         cale=new Calendario();
         map=new Mapa();
@@ -100,12 +110,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.nav_calendario);
         }
         ft.commit();
+
+
+        imagen.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View view) {
+
+                Uri uri = Uri.parse("https://www.facebook.com/pg/LXII-Evento-Nacional-Estudiantil-Deportivo-Tec-NM-Oaxaca-2018-610649012622622/");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }});
+
     }
 
     private void permissionGranted() {
         Toast.makeText(MainActivity.this, getString(R.string.permission_granted), Toast.LENGTH_SHORT).show();
 
     }
+
 
 
     @Override
@@ -157,6 +179,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
 
 
 
